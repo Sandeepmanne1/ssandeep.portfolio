@@ -1,0 +1,12 @@
+{
+  "name": "manne-sandeep-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal finance & analytics portfolio for Manne Sandeep — MBA (Finance), Anurag University.",
+  "author": "Manne Sandeep",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve ."
+  }
+}

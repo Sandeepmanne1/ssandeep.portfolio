@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Manne Sandeep | Portfolio — Finance &amp; Analytics</title>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<!-- Tailwind CSS CDN with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: '#070709',
+            cardDark: '#0f0f14',
+            surfaceBorder: '#232332',
+            brandPurple: '#9333ea',
+            brandViolet: '#a855f7',
+            accentGlow: '#7c3aed',
+          },
+          boxShadow: {
+            glow: '0 0 45px -10px rgba(168, 85, 247, 0.35)',
+            glowCard: '0 10px 40px -10px rgba(147, 51, 234, 0.28)',
+            innerGlow: 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+    html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+    body {
+      background-color: #060608;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+    /* Subtle background grid pattern */
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(147, 51, 234, 0.08) 1px, transparent 0);
+      background-size: 32px 32px;
+    }
+    /* Ambient neon gradients */
+    .radial-ambient {
+      background: radial-gradient(circle at 50% 20%, rgba(124, 58, 237, 0.14) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #2a2a3c;
+      border-radius: 9999px;
+    }
+    /* Barcode styling */
+    .barcode-line {
+      display: inline-block;
+      height: 28px;
+      background-color: #cbd5e1;
+    }
+
+    /* 3D tilt smoothness */
+    .tilt-card {
+      transition: transform 0.18s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    /* Flip card styles */
+    .perspective-container {
+      perspective: 1200px;
+    }
+    .card-flipper {
+      transition: transform 0.7s cubic-bezier(0.34, 1.3, 0.64, 1);
+      transform-style: preserve-3d;
+      transform-origin: center center;
+    }
+    .card-flipper.is-flipped {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Shimmer highlight effect */
+    @keyframes shimmerGlow {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-text {
+      background: linear-gradient(90deg, #c084fc 0%, #38bdf8 50%, #e879f9 100%);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmerGlow 6s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-obsidian font-sans antialiased text-slate-200 selection:bg-purple-600 selection:text-white relative bg-grid-pattern" data-mode="connect">
+<!-- Ambient Glow Elements in Background -->
+<div class="fixed top-0 left-1/4 w-96 h-96 bg-purple-600/10 blur-[130px] pointer-events-none rounded-full"></div>
+<div class="fixed top-1/3 right-10 w-[500px] h-[500px] bg-violet-700/10 blur-[160px] pointer-events-none rounded-full"></div>
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#070709]/85 border-b border-surfaceBorder/60" data-purpose="site-navigation" style="padding-top: env(safe-area-inset-top, 0px);">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Profile Monogram and Title -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform shrink-0"><div class="w-10 h-10 rounded-full border border-purple-500/30 shadow-lg shadow-purple-600/30 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-white text-xs font-extrabold tracking-wide">MS</div></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white tracking-wide group-hover:text-purple-300 transition-colors">Manne Sandeep</span>
+<span class="text-[10px] tracking-widest text-slate-400 uppercase font-mono">FINANCE • ANALYTICS • MBA</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden lg:flex items-center gap-1 text-[13px] font-medium text-slate-300 bg-[#12121a]/80 p-1.5 rounded-full border border-surfaceBorder">
+<a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#about">About</a>
+<a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#experience">Experience</a>
+<a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#services">Services</a><a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#projects">Projects</a>
+<a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#education">Education</a>
+<a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#skills">Certificates</a>
+<a class="px-2 xl:px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-colors" href="#volunteering">Volunteering</a>
+</nav>
+<!-- Action Button Group -->
+<div class="flex items-center gap-3">
+<a href="assets/documents/Manne_Sandeep_Resume.pdf" download="Manne_Sandeep_Resume.pdf" class="hidden sm:inline-flex lg:hidden xl:inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white px-3.5 py-1.5 rounded-full bg-purple-950/40 hover:bg-purple-900/50 border border-purple-500/30 transition-all hover:scale-[1.02] shadow-sm"><svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">&nbsp;Resume</span></a>
+<a class="hidden xl:inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-white px-3 py-2 transition-colors" href="https://www.linkedin.com/in/Mannesandeep43" rel="noopener noreferrer" target="_blank">
+<span class="">LinkedIn</span>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<a href="mailto:mannesandeep43@gmail.com?subject=Portfolio%20Inquiry" onclick="copyEmailFallback()" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-lg shadow-purple-600/30 ring-1 ring-purple-300/40 transition-all hover:scale-[1.02] active:scale-95"><span class="">Connect</span><span class="text-sm font-bold">→</span></a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden" data-purpose="hero-banner" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Hero Content Column -->
+<div class="lg:col-span-7 flex flex-col items-start z-10">
+<!-- Subtle Accent Ring icon placeholder -->
+<div class="w-8 h-8 rounded-full border border-purple-500/30 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+<span class="w-2.5 h-2.5 rounded-full bg-purple-500/70 animate-pulse"></span>
+</div>
+<!-- Bold High-Impact Name Headline -->
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white uppercase leading-[1.08] mb-6">
+            MANNE<br>SANDEEP
+          </h1>
+<!-- Purple Badge Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-xs font-mono font-medium mb-7 hover:border-purple-400 transition-colors shadow-sm">
+<span class="text-purple-400 animate-spin" style="animation-duration: 9s;">✦</span>
+<span class="">Finance × Data Analytics × Financial Modeling</span>
+</div>
+<!-- Punchy Catchphrase Headline -->
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-slate-100 max-w-xl leading-snug mb-5">
+            I turn complex financial data into <span class="shimmer-text font-bold">actionable insights</span>, investment strategies &amp; growth.
+          </h2>
+<!-- Descriptive Executive Summary -->
+<p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mb-9">
+            Detail-oriented MBA student specializing in Finance with advanced Excel proficiency, financial analysis and reporting acumen. Eager to contribute to high-impact financial analysis, research, and corporate finance roles.
+          </p>
+<!-- Call to Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 mb-10">
+<a class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white text-sm font-semibold px-6 py-3 rounded-xl shadow-glow transition-all hover:-translate-y-0.5" href="#projects">
+<span class="">Explore my work</span>
+<span class="text-base">→</span>
+</a>
+<a href="mailto:mannesandeep43@gmail.com?subject=Portfolio%20Inquiry" onclick="copyEmailFallback()" class="inline-flex items-center gap-2 bg-[#12121a] hover:bg-[#1a1a26] text-slate-300 hover:text-white border border-surfaceBorder hover:border-slate-600 text-sm font-semibold px-6 py-3 rounded-xl transition-all"><span class="">Let's connect</span><span class="text-slate-400">↗</span></a>
+<a href="assets/documents/Manne_Sandeep_Resume.pdf" download="Manne_Sandeep_Resume.pdf" class="inline-flex items-center gap-2 bg-[#171724] hover:bg-purple-950/50 text-purple-200 hover:text-white border border-purple-500/40 text-sm font-semibold px-5 py-3 rounded-xl transition-all hover:scale-[1.02] shadow-sm group"><svg class="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Download Resume (PDF)</span></a></div>
+<!-- Meta Footnote Line / Chips -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400 pt-3 border-t border-surfaceBorder/60">
+<span class="hover:text-purple-300 transition-colors">Anurag University</span>
+<span class="text-slate-600">•</span>
+<span class="hover:text-purple-300 transition-colors">MBA (Finance)</span>
+<span class="text-slate-600">•</span>
+<span class="">Hyderabad, India</span>
+<span class="text-slate-600">•</span>
+<span class="text-purple-400 font-semibold">📞 +91 6301737085</span>
+</div>
+</div>
+<!-- Right Column: Interactive ID Card / Student Pass Widget with Physics Cord & 3D Tilt -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end relative perspective-container pt-12 pb-6" id="badge-wrapper">
+<!-- Interactive Lanyard SVG String hanging from top -->
+<svg class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-24 pointer-events-none z-10 overflow-visible" id="lanyard-svg" viewBox="0 0 200 100">
+<defs>
+<linearGradient id="lanyard-grad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#a855f7" stop-opacity="0.85"></stop>
+<stop offset="50%" stop-color="#6366f1" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8"></stop>
+</linearGradient>
+<filter height="140%" id="lanyard-glow" width="140%" x="-20%" y="-20%">
+<feGaussianBlur result="blur" stdDeviation="3"></feGaussianBlur>
+<feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite>
+</filter>
+</defs>
+<!-- Left strap string -->
+<path d="M 70,0 Q 85,50 95,95" fill="none" filter="url(#lanyard-glow)" id="strap-left" stroke="url(#lanyard-grad)" stroke-width="3"></path>
+<!-- Right strap string -->
+<path d="M 130,0 Q 115,50 105,95" fill="none" filter="url(#lanyard-glow)" id="strap-right" stroke="url(#lanyard-grad)" stroke-width="3"></path>
+<!-- Little woven weave texture lines -->
+<path d="M 92,60 Q 100,65 108,60" fill="none" opacity="0.6" stroke="#e0e7ff" stroke-width="1.2"></path>
+<path d="M 93,75 Q 100,80 107,75" fill="none" opacity="0.6" stroke="#e0e7ff" stroke-width="1.2"></path>
+</svg>
+<!-- Card Hanging Clip Mechanism -->
+<div class="absolute top-7 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none transition-transform duration-75" id="badge-clip" style="transform: translateX(-50%) rotate(0deg);">
+<!-- Lanyard Strap / Buckle -->
+<div class="w-6 h-8 bg-zinc-800 rounded-t-sm border border-zinc-700 flex items-center justify-center shadow-md">
+<div class="w-3.5 h-3.5 rounded-full border-2 border-purple-400/80 bg-zinc-900 shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
+</div>
+<!-- Metallic Swivel Hook Slot -->
+<div class="w-12 h-2.5 bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800 border-x border-b border-zinc-500 rounded-b-md shadow-sm"></div>
+</div>
+<!-- 3D Flippable Card Frame with Smooth Tilt -->
+<div class="card-flipper w-full max-w-[370px] relative cursor-pointer" id="hero-badge-card" onclick="toggleHeroCardFlip()" style="transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);">
+<!-- FRONT FACE -->
+<div class="card-face w-full bg-[#0c0c12] rounded-3xl p-4 sm:p-5 border-2 border-purple-500/40 shadow-glowCard relative backdrop-blur-md transition-shadow duration-300 hover:border-purple-400 hover:shadow-[0_15px_50px_-5px_rgba(168,85,247,0.4)]">
+<!-- Hanging Loop Cutout Slot inside Card -->
+<div class="w-14 h-2 rounded-full bg-[#1b1b26] mx-auto mb-4 border border-zinc-700/60 shadow-inner"></div>
+<!-- Card Top Header Meta -->
+<div class="flex items-center justify-between mb-4 px-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 text-[10px] font-extrabold bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded font-mono tracking-wider shadow-sm">AU</span>
+<span class="text-[10px] font-mono font-bold tracking-widest text-slate-300 uppercase">ANURAG UNIVERSITY PASS</span>
+</div>
+<button class="inline-flex items-center gap-1 text-[10px] font-mono uppercase bg-[#181824] hover:bg-purple-900/40 text-slate-400 hover:text-purple-300 px-2.5 py-1 rounded-full border border-surfaceBorder transition-all hover:scale-105" type="button">
+<svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">FLIP</span>
+</button>
+</div>
+<!-- Photo Frame Container -->
+<div class="relative w-full aspect-[4/4.3] rounded-2xl overflow-hidden bg-zinc-900 border border-white/10 group mb-4">
+<img alt="Manne Sandeep" class="w-full h-full object-cover object-top filter contrast-[1.03] group-hover:scale-105 transition-transform duration-500" src="assets/images/manne-sandeep.jpg" width="700" height="840" loading="eager">
+<!-- Subtle Vignette Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent pointer-events-none"></div>
+<!-- Pill Badge Strip over Photo -->
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between bg-[#0e0e16]/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 text-[11px] font-mono">
+<div class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="">Financial Analyst</span>
+</div>
+<div class="text-slate-400 tracking-wider">
+            Excel • Python
+          </div>
+</div>
+</div>
+<!-- Cardholder Identity Typography -->
+<div class="px-1">
+<div class="flex items-baseline justify-between mb-0.5">
+<h3 class="text-xl font-bold text-white tracking-wide">Manne Sandeep</h3>
+<span class="text-[10px] font-mono text-purple-400 font-bold">#MS-PASS</span>
+</div>
+<p class="text-xs text-purple-300 font-mono tracking-tight mb-3">Finance • Analytical Modeling • Stock Trends</p>
+<!-- Education Detail Rows in Card -->
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-[#14141e] p-2.5 rounded-xl border border-surfaceBorder/80 mb-3">
+<div>
+<span class="block text-[9px] uppercase font-mono text-slate-500">Institution</span>
+<span class="text-slate-200 font-medium leading-tight">Anurag University</span>
+</div>
+<div>
+<span class="block text-[9px] uppercase font-mono text-slate-500">Degree &amp; Batch</span>
+<span class="text-slate-200 font-medium leading-tight">MBA - Fin (2024–26)</span>
+</div>
+</div>
+<!-- Barcode & Verification Footer in Pass -->
+<div class="flex items-end justify-between pt-1 border-t border-surfaceBorder/50 font-mono">
+<!-- Barcode Graphics Representation -->
+<div class="flex items-center space-x-[2px] opacity-80" title="#MS-PASS-2026">
+<span class="barcode-line w-1"></span>
+<span class="barcode-line w-0.5"></span>
+<span class="barcode-line w-1.5"></span>
+<span class="barcode-line w-0.5"></span>
+<span class="barcode-line w-2"></span>
+<span class="barcode-line w-0.5"></span>
+<span class="barcode-line w-1"></span>
+<span class="barcode-line w-2"></span>
+<span class="barcode-line w-0.5"></span>
+<span class="barcode-line w-1.5"></span>
+<span class="barcode-line w-0.5"></span>
+<span class="barcode-line w-2"></span>
+<span class="barcode-line w-1"></span>
+<span class="barcode-line w-0.5"></span>
+<span class="barcode-line w-2"></span>
+</div>
+<div class="text-right">
+<span class="block text-[9px] text-slate-500">BATCH 2024–26</span>
+<span class="text-[10px] font-bold text-purple-300 tracking-wider">HYDERABAD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BACK FACE OF ID CARD -->
+<div class="card-face card-back absolute inset-0 w-full h-full bg-[#0d0d17] rounded-3xl p-5 border-2 border-indigo-500/40 shadow-glowCard flex flex-col justify-between backdrop-blur-md">
+<!-- Hanging Slot -->
+<div class="w-14 h-2 rounded-full bg-[#1b1b26] mx-auto border border-zinc-700/60 shadow-inner"></div>
+<!-- University Chip & Hologram Header -->
+<div class="flex items-center justify-between border-b border-surfaceBorder/60 pb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center font-bold text-white text-xs shadow-inner">
+            AU
+          </div>
+<div>
+<span class="text-xs font-bold text-white block">STUDENT VERIFICATION</span>
+<span class="text-[9px] font-mono text-purple-300">SECURE DIGITAL IDENTITY</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 opacity-80 blur-[0.5px] animate-pulse"></div>
+</div>
+<!-- Quick Metrics inside pass -->
+<div class="space-y-2.5 my-auto font-mono text-xs">
+<div class="p-2.5 rounded-xl bg-[#141422] border border-purple-500/20 flex items-center justify-between">
+<span class="text-slate-400 text-[11px]">Primary Focus</span>
+<span class="text-purple-300 font-semibold">Corporate Finance</span>
+</div>
+<div class="p-2.5 rounded-xl bg-[#141422] border border-purple-500/20 flex items-center justify-between">
+<span class="text-slate-400 text-[11px]">Specialization</span>
+<span class="text-cyan-300 font-semibold">MBA Finance</span>
+</div>
+<div class="p-2.5 rounded-xl bg-[#141422] border border-purple-500/20 flex items-center justify-between">
+<span class="text-slate-400 text-[11px]">Tools</span>
+<span class="text-emerald-400 font-semibold">Excel • Python</span>
+</div>
+<div class="p-2.5 rounded-xl bg-[#141422] border border-purple-500/20 flex items-center justify-between">
+<span class="text-slate-400 text-[11px]">Contact</span>
+<span class="text-slate-200 font-semibold">+91 6301737085</span>
+</div>
+</div>
+<!-- Flip back prompt footer -->
+<div class="pt-3 border-t border-surfaceBorder/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+<span class="text-purple-400">Click anywhere to flip back</span>
+<span class="text-slate-500">PASS ID #2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ExperienceSection / Metrics -->
+<section class="py-16 border-t border-surfaceBorder/50 relative" data-purpose="impact-and-scale" id="metrics">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-center mb-8">
+<div class="w-7 h-7 rounded-full border border-purple-500/30 flex items-center justify-center shadow-[0_0_12px_rgba(168,85,247,0.3)]">
+<span class="w-2 h-2 rounded-full bg-purple-400 shadow-glow animate-pulse"></span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-8 font-mono text-xs">
+<div class="flex items-center gap-2 text-purple-400 font-semibold tracking-wider">
+<span class="w-2 h-2 rounded-full bg-purple-400"></span>
+<span class="">01 / IMPACT &amp; SCALE</span>
+</div>
+<div class="text-slate-500 tracking-widest uppercase text-[11px]">DATA SPREAD • ARCHIVE METRICS</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="tilt-card relative bg-[#12101a]/70 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-purple-500/20 hover:border-purple-400/60 hover:bg-[#181824] transition-all duration-300 group shadow-lg">
+<div class="flex items-start justify-between mb-3">
+<div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-sans counter-value" data-suffix="+" data-target="500">500+</div>
+<span class="w-2 h-2 rounded-full bg-purple-400/80 shadow-glow mt-2 group-hover:scale-125 transition-transform"></span>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium leading-snug mb-5">Financial Models &amp; Data Points Analyzed</p>
+<div class="w-full h-0.5 bg-surfaceBorder/60 group-hover:bg-purple-500/50 transition-colors"></div>
+</div>
+<!-- Card 2 -->
+<div class="tilt-card relative bg-[#12101a]/70 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-purple-500/20 hover:border-purple-400/60 hover:bg-[#181824] transition-all duration-300 group shadow-lg">
+<div class="flex items-start justify-between mb-3">
+<div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-sans counter-value" data-suffix="+" data-target="100">100+</div>
+<span class="w-2 h-2 rounded-full bg-purple-400/80 shadow-glow mt-2 group-hover:scale-125 transition-transform"></span>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium leading-snug mb-5">Market &amp; Equity Research Reports</p>
+<div class="w-full h-0.5 bg-surfaceBorder/60 group-hover:bg-purple-500/50 transition-colors"></div>
+</div>
+<!-- Card 3 -->
+<div class="tilt-card relative bg-[#12101a]/70 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-purple-500/20 hover:border-purple-400/60 hover:bg-[#181824] transition-all duration-300 group shadow-lg">
+<div class="flex items-start justify-between mb-3">
+<div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-sans counter-value" data-suffix="%+" data-target="83">83%+</div>
+<span class="w-2 h-2 rounded-full bg-purple-400/80 shadow-glow mt-2 group-hover:scale-125 transition-transform"></span>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium leading-snug mb-5">Academic Performance (B.Com &amp; SSC)</p>
+<div class="w-full h-0.5 bg-surfaceBorder/60 group-hover:bg-purple-500/50 transition-colors"></div>
+</div>
+<!-- Card 4 -->
+<div class="tilt-card relative bg-[#12101a]/70 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-purple-500/20 hover:border-purple-400/60 hover:bg-[#181824] transition-all duration-300 group shadow-lg">
+<div class="flex items-start justify-between mb-3">
+<div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-sans counter-value" data-suffix="+" data-target="15">15+</div>
+<span class="w-2 h-2 rounded-full bg-purple-400/80 shadow-glow mt-2 group-hover:scale-125 transition-transform"></span>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 font-medium leading-snug mb-5">Core Financial Tools &amp; Methodologies</p>
+<div class="w-full h-0.5 bg-surfaceBorder/60 group-hover:bg-purple-500/50 transition-colors"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- BEGIN: WorkExperience -->
+<section class="py-20 border-t border-surfaceBorder/50 relative" data-purpose="work-experience" id="experience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12">
+<span class="text-xs uppercase font-mono tracking-widest text-purple-400 block mb-2">02 // PROFESSIONAL BACKGROUND</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Work Experience</h2>
+</div>
+<!-- Experience Card Container -->
+<div class="tilt-card bg-cardDark/80 rounded-3xl p-6 sm:p-8 border border-surfaceBorder hover:border-purple-500/40 transition-colors shadow-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-surfaceBorder/70">
+<div class="">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-xs font-mono mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+              Sales &amp; Market Research Intern
+            </div>
+<h3 class="text-2xl font-bold text-white">Vijay Sales (India) Private Limited</h3>
+<p class="text-sm text-slate-400">South Region Retail Division</p>
+</div>
+<div class="flex flex-col sm:flex-row md:flex-col items-start sm:items-end justify-between md:justify-center gap-2.5">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-lg bg-surfaceBorder text-slate-300 text-xs font-mono font-medium">06/2025 – 08/2025</span>
+<span class="text-xs text-purple-400 font-mono">Hyderabad, India</span>
+</div>
+<a class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-purple-500/40 bg-purple-600/10 hover:bg-purple-600/20 text-purple-300 hover:text-white transition-all text-xs font-mono font-medium shadow-sm hover:scale-[1.02] active:scale-95 group" href="https://drive.google.com/file/d/1KeCplq_JEmHAldI_1xKghYzWBerKV5QN/view?usp=sharing" rel="noopener noreferrer" target="_blank" title="View &amp; Download Internship Certificate"><svg class="w-3.5 h-3.5 text-purple-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Experience Certificate</span><span class="bg-purple-900/50 text-[10px] px-1.5 py-0.5 rounded text-purple-200 border border-purple-500/30 font-bold">PDF</span></a>
+</div>
+</div>
+<!-- Responsibilities & Impact Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
+<div class="tilt-card p-4 rounded-2xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 transition-all">
+<div class="text-purple-400 font-mono text-sm font-bold mb-2">01. Sales Operations</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+              Assisted in frontline sales operations, customer journey touchpoints, and active interaction across high-traffic retail outlet environments.
+            </p>
+</div>
+<div class="tilt-card p-4 rounded-2xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 transition-all">
+<div class="text-purple-400 font-mono text-sm font-bold mb-2">02. Data Gathering &amp; Excel</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+              Collected and rigorously maintained sales volume data for daily executive tracking and consolidated reporting using Microsoft Excel.
+            </p>
+</div>
+<div class="tilt-card p-4 rounded-2xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 transition-all">
+<div class="text-purple-400 font-mono text-sm font-bold mb-2">03. Market &amp; Demand Research</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+              Supported targeted market research initiatives analyzing consumer preferences, competitor pricing, and regional electronics demand patterns.
+            </p>
+</div>
+<div class="tilt-card p-4 rounded-2xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 transition-all">
+<div class="text-purple-400 font-mono text-sm font-bold mb-2">04. Analytical Performance Reviews</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+              Synthesized raw sales metrics into coherent analytical presentations for weekly internal managerial reviews and KPI tracking.
+            </p>
+</div>
+<div class="tilt-card p-4 rounded-2xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 transition-all">
+<div class="text-purple-400 font-mono text-sm font-bold mb-2">05. Financial Documentation</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+              Managed systematic invoice checking, foundational financial records, audit checklists, and billing discrepancy resolutions.
+            </p>
+</div>
+<div class="tilt-card p-4 rounded-2xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 transition-all">
+<div class="text-purple-400 font-mono text-sm font-bold mb-2">06. Regional Coordination</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+              Coordinated cross-department communication between warehouse logistics, inventory managers, and regional commercial sales teams.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WorkExperience -->
+<!-- BEGIN: ProjectsSection -->
+<section class="py-20 border-t border-surfaceBorder/50 relative" data-purpose="featured-projects" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs uppercase font-mono tracking-widest text-purple-400 block mb-2">03 // RESEARCH &amp; MODELING</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Project</h2>
+</div>
+<p class="text-sm font-mono text-slate-400 mt-2 md:mt-0">Academic &amp; Quantitative Portfolio Work</p>
+</div>
+<!-- Featured Project Card with 3D tilt -->
+<div class="tilt-card relative bg-gradient-to-br from-[#12121c] via-[#0d0d14] to-[#07070a] rounded-3xl p-6 sm:p-10 border border-purple-500/40 shadow-glow overflow-hidden">
+<!-- Glowing accent light in card corner -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/40 border border-purple-400/30 text-purple-300 text-xs font-mono mb-4">
+<span class="">● Academic Research Project</span>
+<span class="">• Anurag University (2024)</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+              Analysis of Stock Market Trends
+            </h3>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              A comprehensive quantitative study evaluating equities, macroeconomic indicators, and systematic market fluctuations to evaluate volatility and construct balanced investment portfolios.
+            </p>
+<!-- Technical bullet points -->
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+<span class="text-purple-400 font-bold mt-0.5">✦</span>
+<span class="">Analyzed multi-year historical stock price patterns and trends to evaluate directional market behavior across diverse sector indexes.</span>
+</li>
+<li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+<span class="text-purple-400 font-bold mt-0.5">✦</span>
+<span class="">Computed fundamental and statistical return metrics, beta risk coefficients, standard deviation, and correlation matrices to evaluate downside risk.</span>
+</li>
+<li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+<span class="text-purple-400 font-bold mt-0.5">✦</span>
+<span class="">Modeled portfolio optimization formulas in MS Excel &amp; Python, determining the optimal Sharpe ratio and balanced asset allocations.</span>
+</li>
+<li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+<span class="text-purple-400 font-bold mt-0.5">✦</span>
+<span class="">Designed dynamic visualizations, candlestick dashboards, and structured investment decision-making summary decks.</span>
+</li>
+</ul>
+<!-- Tech Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-md bg-[#1d1d2b] text-purple-300 text-xs font-mono font-medium border border-purple-500/20">Microsoft Excel</span>
+<span class="px-3 py-1 rounded-md bg-[#1d1d2b] text-purple-300 text-xs font-mono font-medium border border-purple-500/20">Python</span>
+<span class="px-3 py-1 rounded-md bg-[#1d1d2b] text-purple-300 text-xs font-mono font-medium border border-purple-500/20">Statistical Modeling</span>
+<span class="px-3 py-1 rounded-md bg-[#1d1d2b] text-purple-300 text-xs font-mono font-medium border border-purple-500/20">Risk-Return Analysis</span>
+</div>
+</div>
+<!-- Quantitative Highlights Box -->
+<div class="lg:col-span-5 bg-[#09090f]/80 p-6 rounded-2xl border border-surfaceBorder shadow-inner">
+<h4 class="text-xs uppercase font-mono text-slate-400 tracking-wider mb-4 border-b border-surfaceBorder/60 pb-2">Key Modeling Parameters</h4>
+<div class="space-y-4 font-mono text-xs">
+<div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/60 flex items-center justify-between hover:border-purple-400/40 transition-colors">
+<span class="text-slate-400">Risk Metrics Analyzed</span>
+<span class="text-purple-300 font-bold">Beta, Volatility, VaR</span>
+</div>
+<div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/60 flex items-center justify-between hover:border-purple-400/40 transition-colors">
+<span class="text-slate-400">Data Modeling Core</span>
+<span class="text-indigo-300 font-bold">Correlation &amp; Regression</span>
+</div>
+<div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/60 flex items-center justify-between hover:border-purple-400/40 transition-colors">
+<span class="text-slate-400">Target Deliverable</span>
+<span class="text-emerald-400 font-bold">Investment Advisory Deck</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surfaceBorder/60 text-[11px] text-slate-400 leading-normal">
+              Utilized empirical quantitative techniques to evaluate capital market trends and portfolio diversification opportunities.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ProjectsSection -->
+<!-- BEGIN: ServicesSection -->
+<section class="py-20 border-t border-surfaceBorder/50 relative" data-purpose="services-offered" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs uppercase font-mono tracking-widest text-purple-400 block mb-2">04 // ADVISORY &amp; ANALYTICAL EXPERTISE</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Services Offered</h2>
+</div>
+<p class="text-sm font-mono text-slate-400 mt-2 md:mt-0">Custom Financial &amp; Data Analytics Solutions</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="tilt-card p-6 rounded-3xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 hover:bg-[#181824] transition-all duration-300 group flex flex-col justify-between shadow-lg">
+<div class="">
+<div class="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(147,51,234,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Financial Analysis &amp; Ratio Evaluation</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+Rigorous scrutiny of financial statements assessing solvency, liquidity, profitability margins, and operating efficiency to unearth business performance drivers.
+</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surfaceBorder/50 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-purple-300 border border-surfaceBorder/80">Ratio Reports</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-slate-300 border border-surfaceBorder/80">3-Statement Analysis</span>
+</div>
+</div>
+<div class="tilt-card p-6 rounded-3xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 hover:bg-[#181824] transition-all duration-300 group flex flex-col justify-between shadow-lg">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(147,51,234,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Financial Modeling &amp; Valuation</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+Structured DCF valuation models, dynamic multi-scenario forecasts, sensitivity tables, and interactive assumptions built in Excel for corporate decision-makers.
+</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surfaceBorder/50 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-purple-300 border border-surfaceBorder/80">DCF Models</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-slate-300 border border-surfaceBorder/80">Sensitivity Tables</span>
+</div>
+</div>
+<div class="tilt-card p-6 rounded-3xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 hover:bg-[#181824] transition-all duration-300 group flex flex-col justify-between shadow-lg">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(147,51,234,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Market Research &amp; Equity Trends</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+Quantitative evaluation of capital market patterns, beta risk indices, competitive peer benchmarking, and macroeconomic impact reviews for smart equities analysis.
+</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surfaceBorder/50 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-purple-300 border border-surfaceBorder/80">Beta &amp; Volatility</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-slate-300 border border-surfaceBorder/80">Peer Benchmarking</span>
+</div>
+</div>
+<div class="tilt-card p-6 rounded-3xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 hover:bg-[#181824] transition-all duration-300 group flex flex-col justify-between shadow-lg">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(147,51,234,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Excel Automation &amp; Reporting</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+Transformation of disaggregated raw figures into automated spreadsheets, advanced lookup architectures, pivot reporting, and executive visualization summaries.
+</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surfaceBorder/50 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-purple-300 border border-surfaceBorder/80">Excel Dashboards</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-slate-300 border border-surfaceBorder/80">Automated Tracking</span>
+</div>
+</div>
+<div class="tilt-card p-6 rounded-3xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 hover:bg-[#181824] transition-all duration-300 group flex flex-col justify-between shadow-lg">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(147,51,234,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Budgeting &amp; Variance Analysis</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+Detailed revenue &amp; expenditure budgeting, periodic variance diagnostics, cash flow tracking, and disciplined financial control mechanisms for operational teams.
+</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surfaceBorder/50 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-purple-300 border border-surfaceBorder/80">Variance Diagnostics</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-slate-300 border border-surfaceBorder/80">Cash Flow Models</span>
+</div>
+</div>
+<div class="tilt-card p-6 rounded-3xl bg-[#14141e]/70 border border-surfaceBorder/60 hover:border-purple-500/40 hover:bg-[#181824] transition-all duration-300 group flex flex-col justify-between shadow-lg">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(147,51,234,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Portfolio Risk &amp; Allocation</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+Asset mix optimization strategies, Sharpe ratio calculation, correlation matrix analysis, and quantitative risk containment using Python and statistical toolkits.
+</p>
+</div>
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surfaceBorder/50 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-purple-300 border border-surfaceBorder/80">Sharpe Ratio</span>
+<span class="px-2.5 py-1 rounded-lg bg-[#141420] text-slate-300 border border-surfaceBorder/80">Python Risk Models</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BEGIN: EducationSection -->
+<section class="py-20 border-t border-surfaceBorder/50 relative" data-purpose="education-timeline" id="education">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12">
+<span class="text-xs uppercase font-mono tracking-widest text-purple-400 block mb-2">05 // ACADEMIC FOUNDATION</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Education</h2>
+</div>
+<!-- Education Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: MBA -->
+<div class="tilt-card bg-cardDark p-6 sm:p-7 rounded-3xl border border-purple-500/40 relative overflow-hidden group hover:border-purple-400 transition-all shadow-md">
+<div class="flex items-center justify-between text-xs font-mono text-purple-400 mb-3">
+<span class="">08/2024 – 06/2026 (PURSUING)</span>
+<span class="px-2 py-0.5 rounded bg-purple-900/50 border border-purple-500/30 text-purple-200">Postgraduate</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+            Master of Business Administration (MBA)
+          </h3>
+<p class="text-xs text-purple-300 font-mono mb-4">Specialization: Finance</p>
+<p class="text-sm font-medium text-slate-300">Anurag University</p>
+<p class="text-xs text-slate-500">Ghatkesar, Hyderabad, Telangana</p>
+</div>
+<!-- Card 2: B.Com -->
+<div class="tilt-card bg-cardDark p-6 sm:p-7 rounded-3xl border border-surfaceBorder relative overflow-hidden group hover:border-purple-500/40 transition-all shadow-md">
+<div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
+<span class="">08/2021 – 06/2024</span>
+<span class="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 font-bold">83.4% Score</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+            Bachelor of Commerce (Computer Applications)
+          </h3>
+<p class="text-xs text-purple-300 font-mono mb-4">Undergraduate Degree</p>
+<p class="text-sm font-medium text-slate-300">Babu Jagjeevan Ram Govt. Degree College</p>
+<p class="text-xs text-slate-500">Osmania University Affiliated, Hyderabad</p>
+</div>
+<!-- Card 3: Intermediate -->
+<div class="tilt-card bg-cardDark p-6 sm:p-7 rounded-3xl border border-surfaceBorder relative overflow-hidden group hover:border-purple-500/40 transition-all shadow-md">
+<div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
+<span class="">08/2019 – 05/2021</span>
+<span class="px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-500/40 text-indigo-300 font-bold">80.3% Score</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+            Intermediate (MEC)
+          </h3>
+<p class="text-xs text-purple-300 font-mono mb-4">Mathematics, Economics &amp; Commerce</p>
+<p class="text-sm font-medium text-slate-300">Sri Medhavi Junior College</p>
+<p class="text-xs text-slate-500">Telangana State Board of Intermediate Education</p>
+</div>
+<!-- Card 4: SSC -->
+<div class="tilt-card bg-cardDark p-6 sm:p-7 rounded-3xl border border-surfaceBorder relative overflow-hidden group hover:border-purple-500/40 transition-all shadow-md">
+<div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
+<span class="">06/2016 – 04/2019</span>
+<span class="px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-500/40 text-indigo-300 font-bold">83.0% Score</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+            Secondary School Certificate (SSC)
+          </h3>
+<p class="text-xs text-purple-300 font-mono mb-4">Class X High School</p>
+<p class="text-sm font-medium text-slate-300">Sacred Heart High School</p>
+<p class="text-xs text-slate-500">Hyderabad, Telangana</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EducationSection -->
+<!-- BEGIN: SkillsAndCertificationsSection -->
+<section class="py-20 border-t border-surfaceBorder/50 relative" data-purpose="skills-and-certifications" id="skills">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12">
+<span class="text-xs uppercase font-mono tracking-widest text-purple-400 block mb-2">06 // DOMAIN COMPETENCIES</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Skills &amp; Certifications</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Domain Skills Column -->
+<div class="tilt-card bg-cardDark p-6 rounded-3xl border border-surfaceBorder">
+<h3 class="text-sm font-mono uppercase tracking-wider text-purple-400 font-bold mb-5 flex items-center gap-2">
+<span class="">📊</span> Professional Finance Skills
+          </h3>
+<div class="flex flex-wrap gap-2.5">
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Financial Analysis</span>
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Budgeting &amp; Forecasting</span>
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Ratio Analysis</span>
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Financial Reporting</span>
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Excel-Based Data Modeling</span>
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Market Research</span>
+<span class="px-3 py-1.5 rounded-xl bg-[#171724] border border-surfaceBorder text-xs text-slate-200 hover:border-purple-500/50 hover:text-white transition-all hover:scale-105">Variance Analysis</span>
+</div>
+<h3 class="text-sm font-mono uppercase tracking-wider text-purple-400 font-bold mt-8 mb-4 flex items-center gap-2">
+<span class="">⚙️</span> Technical Tools
+          </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-xs font-mono text-purple-200 hover:border-purple-400 transition-all hover:scale-105">MS Excel (Advanced)</span>
+<span class="px-3 py-1.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-xs font-mono text-purple-200 hover:border-purple-400 transition-all hover:scale-105">Python (Data Analysis)</span>
+<span class="px-3 py-1.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-xs font-mono text-purple-200 hover:border-purple-400 transition-all hover:scale-105">Financial Modeling</span>
+<span class="px-3 py-1.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-xs font-mono text-purple-200 hover:border-purple-400 transition-all hover:scale-105">MS PowerPoint</span>
+</div>
+</div>
+<!-- Certifications Column -->
+<div class="tilt-card bg-cardDark p-6 rounded-3xl border border-surfaceBorder">
+<h3 class="text-sm font-mono uppercase tracking-wider text-purple-400 font-bold mb-5 flex items-center gap-2">
+<span class="">📜</span> Verified Certifications
+          </h3>
+<div class="space-y-3.5">
+<div class="p-3.5 rounded-2xl bg-[#141420] border border-surfaceBorder/80 hover:border-purple-500/40 transition-colors">
+<span class="text-[10px] uppercase font-mono text-purple-400 block font-semibold">Kotak Neo</span>
+<h4 class="text-sm font-semibold text-white">Financial Markets</h4>
+<p class="text-xs text-slate-400 mt-1">Foundational and market dynamics certification</p>
+</div>
+<div class="p-3.5 rounded-2xl bg-[#141420] border border-surfaceBorder/80 hover:border-purple-500/40 transition-colors">
+<span class="text-[10px] uppercase font-mono text-purple-400 block font-semibold">LinkedIn Learning</span>
+<h4 class="text-sm font-semibold text-white">Advanced Excel for Finance Professionals</h4>
+<p class="text-xs text-slate-400 mt-1">Formulas, lookup models, sensitivity tables &amp; macros</p>
+</div>
+<div class="p-3.5 rounded-2xl bg-[#141420] border border-surfaceBorder/80 hover:border-purple-500/40 transition-colors">
+<span class="text-[10px] uppercase font-mono text-purple-400 block font-semibold">Kotak Neo</span>
+<h4 class="text-sm font-semibold text-white">Python for Data Analysis</h4>
+<p class="text-xs text-slate-400 mt-1">Data cleansing, numerical computation &amp; time series</p>
+</div>
+<div class="p-3.5 rounded-2xl bg-[#141420] border border-surfaceBorder/80 hover:border-purple-500/40 transition-colors">
+<span class="text-[10px] uppercase font-mono text-purple-400 block font-semibold">LinkedIn Learning</span>
+<h4 class="text-sm font-semibold text-white">Financial Modeling Foundations</h4>
+<p class="text-xs text-slate-400 mt-1">3-statement integrated modeling &amp; valuation</p>
+</div>
+</div>
+</div>
+<!-- Strengths & Languages Column -->
+<div class="tilt-card bg-cardDark p-6 rounded-3xl border border-surfaceBorder flex flex-col justify-between">
+<div>
+<h3 class="text-sm font-mono uppercase tracking-wider text-purple-400 font-bold mb-5 flex items-center gap-2">
+<span class="">🌟</span> Core Strengths
+            </h3>
+<div class="space-y-3 text-xs text-slate-300">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#141420] border border-surfaceBorder/50 hover:border-purple-400/30 transition-colors">
+<span class="text-purple-400 font-bold text-sm">✓</span>
+<span class="">Critical thinking &amp; quantitative problem solving</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#141420] border border-surfaceBorder/50 hover:border-purple-400/30 transition-colors">
+<span class="text-purple-400 font-bold text-sm">✓</span>
+<span class="">Meticulous attention to detail &amp; mathematical accuracy</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#141420] border border-surfaceBorder/50 hover:border-purple-400/30 transition-colors">
+<span class="text-purple-400 font-bold text-sm">✓</span>
+<span class="">Structured financial reporting &amp; executive documentation</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#141420] border border-surfaceBorder/50 hover:border-purple-400/30 transition-colors">
+<span class="text-purple-400 font-bold text-sm">✓</span>
+<span class="">Cross-functional communication &amp; collaborative drive</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-5 border-t border-surfaceBorder/60">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">Languages</h4>
+<div class="flex gap-4">
+<div class="flex-1 p-2.5 rounded-xl bg-[#141420] text-center border border-surfaceBorder hover:border-purple-500/40 transition-colors">
+<span class="block text-xs font-bold text-white">Telugu</span>
+<span class="text-[10px] text-purple-400 font-mono">Advanced Native</span>
+</div>
+<div class="flex-1 p-2.5 rounded-xl bg-[#141420] text-center border border-surfaceBorder hover:border-purple-500/40 transition-colors">
+<span class="block text-xs font-bold text-white">English</span>
+<span class="text-[10px] text-purple-400 font-mono">Proficient</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SkillsAndCertificationsSection -->
+<!-- BEGIN: VolunteeringSection -->
+<section class="py-20 border-t border-surfaceBorder/50 relative" data-purpose="volunteering-activities" id="volunteering">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-10">
+<span class="text-xs uppercase font-mono tracking-widest text-purple-400 block mb-2">07 // COMMUNITY &amp; ENGAGEMENT</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Volunteering</h2>
+</div>
+<div class="tilt-card bg-gradient-to-r from-cardDark via-[#13131e] to-cardDark rounded-3xl p-6 sm:p-8 border border-surfaceBorder flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-purple-500/40 transition-colors shadow-lg">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 text-xs font-mono mb-3">
+<span class="">Active Contributor</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">National Service Scheme (NSS)</h3>
+<p class="text-xs font-mono text-purple-300 mb-3">Anurag University Chapter</p>
+<p class="text-sm text-slate-300 leading-relaxed">
+            Actively engaged in grassroots community development initiatives, organizing awareness campaigns, socio-civic welfare programs, and collegiate outreach events aimed at social impact.
+          </p>
+</div>
+<div class="shrink-0 flex items-center justify-center w-24 h-24 rounded-2xl bg-purple-900/20 border border-purple-500/30 text-purple-400 font-mono font-bold text-3xl shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+          NSS
+        </div>
+</div>
+</div>
+</section>
+<!-- END: VolunteeringSection -->
+<!-- BEGIN: Footer -->
+<footer class="pt-24 pb-14 border-t border-surfaceBorder bg-[#050508] relative overflow-hidden" data-purpose="site-footer" style="padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));">
+<!-- Ambient background glow behind CTA -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[140px] pointer-events-none rounded-full"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Top Hero Banner -->
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
+<!-- Ambient Dot & Pill Badge -->
+<div class="relative mb-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-mono shadow-sm"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span></span><span class="tracking-wide">Available for Finance &amp; Analytics Roles</span></div>
+</div>
+<!-- Large Impact Headline -->
+<h2 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 text-center leading-[1.08] uppercase">
+  DRIVING PRECISION.<br>
+  DELIVERING <span class="bg-gradient-to-r from-purple-400 via-indigo-300 to-white bg-clip-text text-transparent">FINANCIAL VALUE.</span>
+</h2>
+<!-- Categories / Subtext -->
+<div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-mono font-semibold tracking-widest uppercase mb-12"><span class="text-purple-300">FINANCE</span><span class="text-slate-600">•</span><span class="text-purple-300">DATA ANALYTICS</span><span class="text-slate-600">•</span><span class="text-purple-300">FINANCIAL MODELING</span><span class="text-slate-600">•</span><span class="text-purple-300">EQUITY RESEARCH</span></div>
+<!-- Action Buttons Row -->
+<div class="flex flex-wrap items-center justify-center gap-3.5 sm:gap-4 w-full max-w-3xl">
+<!-- Button: LinkedIn -->
+<a class="inline-flex items-center gap-2 bg-[#12121a] hover:bg-[#1a1a26] text-slate-200 hover:text-white border border-surfaceBorder hover:border-purple-500/40 font-semibold text-sm px-6 py-3.5 rounded-2xl transition-all hover:scale-[1.02] shadow-sm" href="https://www.linkedin.com/in/Mannesandeep43" rel="noopener noreferrer" target="_blank">
+<span class="">LinkedIn</span>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Button: Download Resume -->
+<a href="assets/documents/Manne_Sandeep_Resume.pdf" download="Manne_Sandeep_Resume.pdf" class="inline-flex items-center gap-2 bg-[#12121a] hover:bg-[#1a1a26] text-slate-200 hover:text-white border border-surfaceBorder hover:border-purple-500/40 font-semibold text-sm px-6 py-3.5 rounded-2xl transition-all hover:scale-[1.02] shadow-sm group"><span class="">Download Resume</span><svg class="w-4 h-4 text-purple-400 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+<!-- Button: Send Email -->
+<div class="inline-flex items-center gap-1 bg-[#12121a] border border-surfaceBorder hover:border-purple-500/40 rounded-2xl p-1 transition-all shadow-sm"><a href="mailto:mannesandeep43@gmail.com?subject=Portfolio%20Inquiry" onclick="copyEmailFallback()" class="inline-flex items-center gap-2 text-slate-200 hover:text-white font-semibold text-sm px-4 py-2.5 rounded-xl hover:bg-white/5 transition-all"><svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Send Email</span></a><button class="inline-flex items-center justify-center p-2 rounded-xl text-slate-400 hover:text-purple-300 hover:bg-white/5 transition-colors relative group" onclick="navigator.clipboard.writeText('mannesandeep43@gmail.com'); const t=this.querySelector('.copy-tip'); if(t){t.textContent='Copied!'; setTimeout(()=&gt;t.textContent='Copy', 1800);}" title="Copy Email Address" type="button"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="copy-tip absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-[#1b1b26] text-purple-300 border border-purple-500/30 text-[10px] font-mono rounded shadow-md pointer-events-none hidden group-hover:block">Copy</span></button></div>
+<!-- Button: WhatsApp -->
+<a class="inline-flex items-center gap-2 bg-[#12121a] hover:bg-[#1a1a26] text-slate-200 hover:text-white border border-surfaceBorder hover:border-emerald-500/40 font-semibold text-sm px-6 py-3.5 rounded-2xl transition-all hover:scale-[1.02] shadow-sm group" href="https://wa.me/916301737085?text=Hi%20Sandeep%2C%20I%20am%20reaching%20out%20regarding%20your%20Finance%20%26%20Valuation%20portfolio." rel="noopener noreferrer" target="_blank" title="Chat with Manne Sandeep on WhatsApp"><svg class="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg><span class="">WhatsApp</span></a></div>
+</div>
+<!-- Bottom Divider & Copyright Line -->
+<div class="pt-8 border-t border-surfaceBorder/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500"><div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6"><a class="hover:text-purple-400 transition-colors" href="#about">Back to top ↑</a></div></div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- Modal: Resume -->
+<div class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden" id="resume-modal"><div class="relative w-full max-w-xl bg-[#0e0e16] border border-purple-500/40 rounded-3xl p-6 sm:p-8 shadow-glow shadow-purple-600/30 text-slate-200"><button class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#181824] hover:bg-[#232336] text-slate-400 hover:text-white flex items-center justify-center border border-surfaceBorder transition-colors" onclick="const m=document.getElementById('resume-modal'); if(m){ m.classList.add('hidden'); m.classList.remove('flex'); }" type="button">✕</button><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/40 flex items-center justify-center text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div><div><h3 class="text-xl font-bold text-white">Curriculum Vitae / Resume</h3><p class="text-xs text-purple-300 font-mono">Manne Sandeep • MBA Finance Specialist</p></div></div><p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">Comprehensive profile outlining financial analysis acumen, investment modeling, quantitative research projects, academic background, and technical tool proficiencies.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-mono text-xs"><div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/80"><span class="text-[10px] text-slate-500 uppercase block mb-0.5">Format &amp; File Type</span><span class="text-purple-300 font-medium">Adobe PDF Document</span></div><div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/80"><span class="text-[10px] text-slate-500 uppercase block mb-0.5">Status</span><span class="text-emerald-400 font-medium">Verified &amp; Updated</span></div></div><div class="flex flex-col sm:flex-row items-center gap-3"><a href="assets/documents/Manne_Sandeep_Resume.pdf" download="Manne_Sandeep_Resume.pdf" class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-semibold px-5 py-3 rounded-xl shadow-lg shadow-purple-600/30 transition-all hover:scale-[1.02]"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Download Resume (PDF)</span></a><a href="assets/documents/Manne_Sandeep_Resume.pdf" target="_blank" rel="noopener noreferrer" class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-[#181824] hover:bg-[#232336] text-slate-200 hover:text-white border border-surfaceBorder text-xs font-semibold px-5 py-3 rounded-xl transition-all"><svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Open PDF in New Tab ↗</span></a></div></div></div>
+<!-- Modal: Certificate -->
+<div class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden" id="certificate-modal">
+<div class="relative w-full max-w-xl bg-[#0e0e16] border border-purple-500/40 rounded-3xl p-6 sm:p-8 shadow-glow shadow-purple-600/30 text-slate-200">
+<button class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#181824] hover:bg-[#232336] text-slate-400 hover:text-white flex items-center justify-center border border-surfaceBorder transition-colors" onclick="closeCertificateModal()" type="button">
+      ✕
+    </button>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/40 flex items-center justify-center text-purple-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white">Internship Completion Certificate</h3>
+<p class="text-xs text-purple-300 font-mono">Vijay Sales (India) Private Limited • South Region</p>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">Official verification of internship completion in Sales Operations &amp; Market Research at Vijay Sales (India) Private Limited, validating retail sales tracking, Excel analysis, and cross-functional inventory reporting.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-mono text-xs">
+<div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/80">
+<span class="text-[10px] text-slate-500 uppercase block mb-0.5">Credential ID &amp; Ref</span>
+<span class="text-purple-300 font-medium">PT0433 _MANNE SANDEEP&nbsp;</span>
+</div>
+<div class="p-3 rounded-xl bg-[#141420] border border-surfaceBorder/80">
+<span class="text-[10px] text-slate-500 uppercase block mb-0.5">Tenure Duration</span>
+<span class="text-emerald-400 font-medium">June 2025 – August 2025</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<a class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-semibold px-5 py-3 rounded-xl shadow-lg shadow-purple-600/30 transition-all hover:scale-[1.02]" href="https://drive.google.com/file/d/1KeCplq_JEmHAldI_1xKghYzWBerKV5QN/view?usp=sharing" rel="noopener noreferrer" target="_blank"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Download Certificate (PDF)</span></a>
+<a class="w-full sm:flex-1 inline-flex items-center justify-center gap-2 bg-[#181824] hover:bg-[#232336] text-slate-200 hover:text-white border border-surfaceBorder text-xs font-semibold px-5 py-3 rounded-xl transition-all" href="https://drive.google.com/file/d/1KeCplq_JEmHAldI_1xKghYzWBerKV5QN/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">View Online ↗</span>
+</a>
+</div>
+</div>
+</div>
+<div class="fixed bottom-5 right-5 z-50 bg-[#12101a] border border-purple-500/40 text-slate-200 px-4 py-3 rounded-2xl shadow-glow shadow-purple-600/30 flex items-center gap-3 font-mono text-xs transition-transform duration-300 pointer-events-none translate-y-24 opacity-0" id="inquiry-toast"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span id="toast-msg" class="">Inquiry routing initiated...</span></div>
+<!-- ========================================== -->
+<!-- SCRIPT: INTERACTIVE PHYSICS, CARD LOGIC    -->
+<!-- ========================================== -->
+<script>
+  // Modal open/close helpers
+  function copyEmailFallback() {
+    try {
+      navigator.clipboard.writeText('mannesandeep43@gmail.com');
+      showToast('Opening your mail app — mannesandeep43@gmail.com copied too.');
+    } catch (e) {
+      showToast('Email: mannesandeep43@gmail.com');
+    }
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('inquiry-toast');
+    const tm = document.getElementById('toast-msg');
+    if (!t) return;
+    if (tm && msg) tm.textContent = msg;
+    t.classList.remove('translate-y-24', 'opacity-0');
+    setTimeout(() => { t.classList.add('translate-y-24', 'opacity-0'); }, 2600);
+  }
+
+  // Certificate modal helpers
+  function openCertificateModal() {
+    const m = document.getElementById('certificate-modal');
+    if (m) {
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+  }
+  function closeCertificateModal() {
+    const m = document.getElementById('certificate-modal');
+    if (m) {
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+  }
+
+  // Resume download placeholder function
+  function downloadSandeepResume() {
+    const m = document.getElementById('resume-modal');
+    if (m) {
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+  }
+
+  // 3D Flip Card Toggle
+  function toggleHeroCardFlip() {
+    const card = document.getElementById('hero-badge-card');
+    if (card) {
+      card.classList.toggle('is-flipped');
+    }
+  }
+
+  /* ----------------------------------------------------
+   * 1. ID PASS INTERACTIVE LANYARD / CORD SWING PHYSICS
+   * ---------------------------------------------------- */
+  (function initBadgePhysics() {
+    const badgeWrapper = document.getElementById('badge-wrapper');
+    const badgeCard = document.getElementById('hero-badge-card');
+    const strapLeft = document.getElementById('strap-left');
+    const strapRight = document.getElementById('strap-right');
+    const badgeClip = document.getElementById('badge-clip');
+    if (!badgeWrapper || !badgeCard) return;
+
+    let targetRotX = 0;
+    let targetRotY = 0;
+    let currentRotX = 0;
+    let currentRotY = 0;
+    let swingAngle = 0;
+    let swingVelocity = 0;
+
+    let mouseOverCard = false;
+
+    badgeWrapper.addEventListener('mouseenter', () => {
+      mouseOverCard = true;
+    });
+
+    badgeWrapper.addEventListener('mouseleave', () => {
+      mouseOverCard = false;
+      targetRotX = 0;
+      targetRotY = 0;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = badgeWrapper.getBoundingClientRect();
+      const cardCenterX = rect.left + rect.width / 2;
+      const cardCenterY = rect.top + rect.height / 2;
+
+      // Proximity swing physics based on mouse distance
+      const distToMouse = Math.hypot(e.clientX - cardCenterX, e.clientY - cardCenterY);
+      if (distToMouse < 450) {
+        const pull = (e.clientX - cardCenterX) / 450;
+        swingVelocity += pull * 0.22;
+      }
+
+      if (mouseOverCard) {
+        const xOffset = (e.clientX - cardCenterX) / (rect.width / 2);
+        const yOffset = (e.clientY - cardCenterY) / (rect.height / 2);
+        // Tilt card
+        targetRotY = Math.max(-18, Math.min(18, xOffset * 15));
+        targetRotX = Math.max(-15, Math.min(15, -yOffset * 12));
+      }
+    });
+
+    function updateBadgeSpring() {
+      // Natural spring-damper for pendulum swing
+      const k = 0.045; // spring constant
+      const damping = 0.91; // air resistance
+      swingVelocity += -k * swingAngle;
+      swingVelocity *= damping;
+      swingAngle += swingVelocity;
+
+      // Smooth 3D tilt interpolation
+      currentRotX += (targetRotX - currentRotX) * 0.12;
+      currentRotY += (targetRotY - currentRotY) * 0.12;
+
+      // Update card rotation (preserving flip state if active)
+      const isFlipped = badgeCard.classList.contains('is-flipped');
+      const baseFlip = isFlipped ? 180 : 0;
+      badgeCard.style.transform = `rotateY(${baseFlip + currentRotY}deg) rotateX(${currentRotX}deg) rotateZ(${swingAngle * 0.6}deg)`;
+
+      // Update metallic clip position & angle
+      if (badgeClip) {
+        badgeClip.style.transform = `translateX(-50%) rotate(${swingAngle * 0.8}deg)`;
+      }
+
+      // Dynamic elastic curved lanyard straps in SVG
+      if (strapLeft && strapRight) {
+        const midShift = swingAngle * 3.5;
+        strapLeft.setAttribute('d', `M 70,0 Q ${85 + midShift},50 ${95 + swingAngle * 1.5},95`);
+        strapRight.setAttribute('d', `M 130,0 Q ${115 + midShift},50 ${105 + swingAngle * 1.5},95`);
+      }
+
+      requestAnimationFrame(updateBadgeSpring);
+    }
+    requestAnimationFrame(updateBadgeSpring);
+  })();
+
+  /* ----------------------------------------------------
+   * 2. 3D TILT EFFECT FOR CARDS ACROSS THE PORTFOLIO
+   * ---------------------------------------------------- */
+  (function initCardTilt() {
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -6.5;
+        const rotateY = ((x - centerX) / centerX) * 6.5;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      });
+    });
+  })();
+
+  /* ----------------------------------------------------
+   * 3. NUMBER COUNTER ANIMATIONS FOR IMPACT METRICS
+   * ---------------------------------------------------- */
+  (function initCounters() {
+    const counters = document.querySelectorAll('.counter-value');
+    if (!counters.length) return;
+
+    let hasRun = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasRun) {
+          hasRun = true;
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const duration = 1400; // ms
+            const startTime = performance.now();
+
+            function updateCount(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease-out cubic
+              const ease = 1 - Math.pow(1 - progress, 3);
+              const current = Math.floor(ease * target);
+
+              counter.innerText = current + suffix;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                counter.innerText = target + suffix;
+              }
+            }
+            requestAnimationFrame(updateCount);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const metricsSection = document.getElementById('metrics');
+    if (metricsSection) {
+      observer.observe(metricsSection);
+    }
+  })();
+</script>
+</body>
+</html>

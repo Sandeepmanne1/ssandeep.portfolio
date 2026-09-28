@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MANNE SANDEEP — Portfolio Intro</title>
+<meta name="description" content="Manne Sandeep — MBA (Finance). Finance, data analytics and investment modeling portfolio.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<!-- Tailwind CSS CDN with forms and container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Space Grotesk, Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: {
+              950: '#050508',
+              900: '#07070a',
+              850: '#0b0b10',
+              800: '#111118'
+            },
+            accent: {
+              purple: '#b388ff',
+              violet: '#a855f7',
+              cyan: '#38bdf8',
+              emerald: '#10b981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Typography & Global Custom Styles -->
+<style data-purpose="typography-theme">
+    body {
+      background-color: #060609;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      user-select: none;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    /* Ambient background grid pattern and subtle vignette */
+    .bg-grid-pattern {
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.07) 0%, rgba(6, 6, 9, 0) 65%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 64px 64px, 64px 64px;
+    }
+
+    /* 3D sculpted / debossed typography style */
+    .sculpted-text {
+      color: #171720;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      text-shadow: 
+        -1px -1px 1px rgba(255, 255, 255, 0.12),
+        1px 1px 2px rgba(0, 0, 0, 0.95),
+        0 0 25px rgba(24, 24, 34, 0.9);
+      background: linear-gradient(180deg, #2b2c3a 0%, #171822 55%, #0f1017 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.9));
+    }
+
+    /* Fluid size: 270px on wide screens (as designed), scales down so the word never clips on tablets/phones */
+    .portfolio-word {
+      font-size: clamp(56px, 21vw, 270px);
+    }
+
+    /* Outer stroke highlight effect */
+    .sculpted-outline {
+      stroke: rgba(255, 255, 255, 0.08);
+      stroke-width: 1.5;
+      fill: none;
+    }
+  </style>
+<!-- Drawing Laser Path & Pen Floating Styles -->
+<style data-purpose="pen-motion-styles">
+    /* Animated luminous drawing stroke */
+    .drawing-path-glow {
+      stroke-dasharray: 2600;
+      stroke-dashoffset: 2600;
+      filter: drop-shadow(0 0 10px #c084fc) drop-shadow(0 0 24px rgba(56, 189, 248, 0.8));
+      transition: stroke-dashoffset 0.1s linear;
+    }
+
+    /* Pen wrapper smoothing */
+    #pen-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+      z-index: 40;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Pen tilt — pivots on the nib tip so the tip always sits exactly on the stroke */
+    .pen-body {
+      transform-origin: 24px 147px;
+      transform: rotate(-35deg);
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.85));
+    }
+
+    /* Glowing nib tip emission */
+    .nib-glow-emitter {
+      animation: pulse-glow 1.8s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        filter: drop-shadow(0 0 6px #a855f7) drop-shadow(0 0 14px #38bdf8);
+        opacity: 0.9;
+      }
+      100% {
+        filter: drop-shadow(0 0 16px #e879f9) drop-shadow(0 0 28px #60a5fa);
+        opacity: 1;
+      }
+    }
+
+    /* Subtle pulse animation for status beacon */
+    @keyframes status-pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+      }
+      50% {
+        opacity: 0.6;
+        transform: scale(0.92);
+        box-shadow: 0 0 12px 2px rgba(16, 185, 129, 0.3);
+      }
+    }
+
+    .status-dot {
+      animation: status-pulse 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen w-full bg-obsidian-950 bg-grid-pattern flex flex-col justify-between overflow-x-hidden select-none">
+<!-- BEGIN: AmbientBackdropLayers -->
+<!-- Radial center spotlight creating deep focal depth -->
+<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden flex items-center justify-center -z-10" data-purpose="ambient-lighting">
+<div class="w-[900px] h-[450px] bg-purple-950/15 rounded-full blur-[140px] transform scale-110"></div>
+<div class="absolute w-[500px] h-[250px] bg-sky-950/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- END: AmbientBackdropLayers -->
+<!-- BEGIN: TopNavigation -->
+<header class="w-full px-8 md:px-14 py-8 flex items-start justify-between gap-4 z-30" data-purpose="top-navigation">
+<!-- Left: Identity & Subtitle -->
+<div class="space-y-1">
+<h1 class="text-white text-base md:text-lg font-bold tracking-[0.22em] uppercase font-sans">
+        MANNE SANDEEP
+      </h1>
+<p class="text-accent-purple/80 text-xs md:text-sm font-normal tracking-wide">
+        Finance <span class="opacity-50">×</span> Data Analytics <span class="opacity-50">×</span> Investment Modeling
+      </p>
+</div>
+<!-- Right: Skip Action Pill Button -->
+<div class="flex items-center gap-4 shrink-0">
+<a class="group relative inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-medium tracking-wider text-gray-300 bg-obsidian-900/80 border border-white/10 hover:border-accent-purple/50 hover:text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/10 backdrop-blur-md whitespace-nowrap" data-purpose="skip-intro-button" href="portfolio.html" id="btn-skip">
+<span class="">Skip intro</span>
+<span class="transform group-hover:translate-x-1 transition-transform duration-200">→</span>
+</a>
+</div>
+</header>
+<!-- END: TopNavigation -->
+<!-- BEGIN: CenterShowcaseStage -->
+<main class="relative flex-1 flex flex-col items-center justify-center px-4 py-6 overflow-hidden" data-purpose="animated-canvas-stage">
+<!-- Central Stage Container -->
+<div class="relative w-full max-w-6xl flex flex-col items-center justify-center">
+<!-- Primary Text Base: Large debossed sculpted 'portfolio' -->
+<div class="relative flex items-center justify-center select-none" data-purpose="typography-canvas">
+<span class="sculpted-text portfolio-word leading-none font-bold tracking-tight select-none">
+          portfolio
+        </span>
+<!-- SVG Motion Canvas Overlay for Pen Tracing Path & Neon Strokes -->
+<svg aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none" data-purpose="vector-stroke-layer" id="trace-svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 320">
+<defs>
+<!-- Vibrant neon stroke gradient -->
+<linearGradient id="neonGlowGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="40%" stop-color="#a855f7"></stop>
+<stop offset="70%" stop-color="#ec4899"></stop>
+<stop offset="100%" stop-color="#a855f7"></stop>
+</linearGradient>
+<!-- Nib emission spark filter -->
+<filter height="200%" id="laserGlow" width="200%" x="-50%" y="-50%">
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="4"></feGaussianBlur>
+<feMerge>
+<feMergeNode in="blur"></feMergeNode>
+<feMergeNode in="SourceGraphic"></feMergeNode>
+</feMerge>
+</filter>
+</defs>
+<!-- Subtle faint blueprint outline path underneath -->
+<path class="stroke-white/5 fill-none" d="M 120 180 Q 140 100 170 180 T 220 180 Q 240 110 270 175 Q 310 90 350 175 Q 380 130 420 175 T 490 175 Q 520 80 540 180 Q 570 120 620 180 Q 640 110 670 180 Q 720 100 750 180 Q 790 110 830 180 Q 860 130 900 180" stroke-dasharray="3 4" stroke-width="1.5"></path>
+<!-- Live Glowing Trace Path executed by the digital pen -->
+<path class="drawing-path-glow fill-none" d="M 95 188 C 115 110 145 105 162 178 C 175 228 200 230 220 178 C 240 120 275 118 290 178 C 308 232 342 225 365 170 C 385 125 410 118 435 178 C 452 225 480 230 500 176 C 518 108 535 78 555 176 C 572 230 598 226 620 176 C 640 118 668 112 690 176 C 710 230 735 230 760 174 C 778 122 805 115 832 176 C 850 225 878 225 905 175" id="active-trace-path" stroke="url(#neonGlowGrad)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Spark particle generated at pen nib -->
+<circle cx="95" cy="188" fill="#f0abfc" filter="url(#laserGlow)" id="nib-spark" r="4.5"></circle>
+</svg>
+<!-- BEGIN: FloatingDigitalStylus -->
+<!-- Animated digital fountain pen / stylus -->
+<div aria-hidden="true" class="absolute pointer-events-none" data-purpose="animated-stylus-object" id="pen-container">
+<div class="pen-body relative flex items-end justify-center">
+<!-- SVG Fountain Pen / Stylus Illustration -->
+<svg fill="none" height="150" viewBox="0 0 48 150" width="48" xmlns="http://www.w3.org/2000/svg">
+<!-- Stylus Body -->
+<path d="M 20 5 L 28 5 L 30 75 L 18 75 Z" fill="url(#penBarrelGrad)"></path>
+<path d="M 21 0 L 27 0 L 27 5 L 21 5 Z" fill="#94a3b8"></path>
+<!-- Tech Accent Ring -->
+<rect fill="#a855f7" height="4" width="12" x="18" y="75"></rect>
+<!-- Grip Section -->
+<path d="M 18 79 L 30 79 L 28 115 L 20 115 Z" fill="#1e1e2d"></path>
+<!-- Stylus Cone Collar -->
+<path d="M 20 115 L 28 115 L 26 130 L 22 130 Z" fill="#475569"></path>
+<!-- Fountain Nib (Metallic Gold/Violet) -->
+<path d="M 22 130 L 26 130 L 25 144 L 24 147 L 23 144 Z" fill="url(#nibGrad)" stroke="#c084fc" stroke-width="0.5"></path>
+<!-- Nib Breather Hole & Slit -->
+<circle cx="24" cy="137" fill="#0f0f15" r="0.9"></circle>
+<line stroke="#38bdf8" stroke-width="0.6" x1="24" x2="24" y1="137" y2="147"></line>
+<!-- Active Light Beam / Nib Laser Glow -->
+<circle class="nib-glow-emitter" cx="24" cy="147" fill="#ffffff" r="3"></circle>
+<!-- Pen Gradients -->
+<defs>
+<linearGradient id="penBarrelGrad" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#1e1b2e"></stop>
+<stop offset="35%" stop-color="#3b3754"></stop>
+<stop offset="70%" stop-color="#1c1a29"></stop>
+<stop offset="100%" stop-color="#0d0d14"></stop>
+</linearGradient>
+<linearGradient id="nibGrad" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#a855f7"></stop>
+<stop offset="50%" stop-color="#e2e8f0"></stop>
+<stop offset="100%" stop-color="#7e22ce"></stop>
+</linearGradient>
+</defs>
+</svg>
+<!-- Energy spark plume behind pen tip -->
+<div class="absolute bottom-0 left-[21px] w-2 h-2 rounded-full bg-cyan-300 blur-[2px] -z-10 animate-ping opacity-75"></div>
+</div>
+</div>
+<!-- END: FloatingDigitalStylus -->
+</div>
+<!-- Interactive Micro-Controls below Central Typo -->
+<div class="flex flex-wrap items-center justify-center gap-4 mt-8 opacity-90 transition-opacity duration-300" data-purpose="animation-control-bar">
+<!-- Replay Trigger -->
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono tracking-wider text-purple-300/80 bg-obsidian-900/90 border border-purple-500/20 hover:border-purple-400 hover:text-white hover:bg-purple-950/30 transition-all duration-200" id="btn-replay" title="Restart digital trace animation" type="button">
+<span class="text-sm">↺</span>
+<span class="">Replay trace</span>
+</button>
+<!-- Pen state indicator -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono tracking-wider text-gray-400 bg-obsidian-900/60 border border-white/5" id="btn-mode">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="">Pen State: <span class="text-gray-200" id="pen-status-label">Active Tracing</span></span>
+</div>
+<!-- Primary Destination Action -->
+<a class="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-medium tracking-wider text-white bg-gradient-to-r from-purple-700/60 to-indigo-700/60 border border-purple-400/40 hover:border-purple-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.35)] transition-all duration-200" href="portfolio.html" id="btn-enter">
+<span class="">Enter Portfolio</span>
+<span class="text-xs">↗</span>
+</a>
+</div>
+</div>
+</main>
+<!-- END: CenterShowcaseStage -->
+<!-- BEGIN: BottomMetadataBar -->
+<footer class="w-full px-8 md:px-12 py-5 border-t border-white/[0.04] bg-obsidian-950/90 backdrop-blur-md z-30" data-purpose="footer-telemetry-bar">
+<div class="flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] font-mono tracking-[0.2em] text-gray-500 uppercase">
+<!-- Left: Status & Initializing Indicator -->
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 status-dot"></span>
+<span class="text-emerald-400/90 font-medium tracking-[0.18em]">INITIALIZING FINANCIAL ARCHIVE</span>
+<span class="text-gray-700 hidden sm:inline">// SYSTEM READY</span>
+</div>
+<!-- Center: Portfolio tag -->
+<div class="text-gray-400 font-medium tracking-[0.24em] text-center">
+        AUTHENTIC PORTFOLIO OS <span class="text-purple-400/80 mx-1">•</span> MANNE SANDEEP
+      </div>
+<!-- Right: Geolocation Coordinates & Station -->
+<div class="flex items-center gap-1.5 text-gray-500 tracking-[0.16em]">
+<span class="">17.3850° N</span>
+<span class="">•</span>
+<span class="">78.4867° E</span>
+<span class="text-gray-600 ml-1 hidden lg:inline">// HYDERABAD, IN</span>
+</div>
+</div>
+</footer>
+<!-- END: BottomMetadataBar -->
+<!-- BEGIN: AnimationControlScript -->
+<script data-purpose="pen-motion-controller">
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = document.getElementById('active-trace-path');
+      const pen = document.getElementById('pen-container');
+      const spark = document.getElementById('nib-spark');
+      const svg = document.getElementById('trace-svg');
+      const replayBtn = document.getElementById('btn-replay');
+      const statusLabel = document.getElementById('pen-status-label');
+
+      if (!path || !pen || !svg) return;
+
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+      path.style.strokeDashoffset = `${pathLength}`;
+
+      let animationFrameId = null;
+      let restartTimer = null;
+      let startTime = null;
+      const duration = 6500; // 6.5 seconds trace duration
+
+      // Nib tip position inside the stylus SVG (the pen pivots on this point)
+      const penTipOffsetX = 24;
+      const penTipOffsetY = 147;
+
+      function updatePenCoordinates(progress) {
+        // Point along the SVG vector path
+        const currentLength = progress * pathLength;
+        const pt = path.getPointAtLength(currentLength);
+
+        // Reveal the drawn stroke up to this point
+        path.style.strokeDashoffset = `${pathLength - currentLength}`;
+
+        // Move the nib spark (SVG coordinates)
+        if (spark) {
+          spark.setAttribute('cx', pt.x);
+          spark.setAttribute('cy', pt.y);
+        }
+
+        // Convert the SVG point to viewport pixels using the real SVG transform
+        // (handles viewBox scaling and letterboxing at every screen size)
+        const ctm = path.getScreenCTM();
+        if (!ctm) return;
+        const svgPoint = svg.createSVGPoint();
+        svgPoint.x = pt.x;
+        svgPoint.y = pt.y;
+        const screenPt = svgPoint.matrixTransform(ctm);
+
+        // The pen is absolutely positioned inside its offset parent,
+        // so convert the viewport point into that parent's local coordinates
+        const parent = pen.offsetParent || document.body;
+        const parentRect = parent.getBoundingClientRect();
+        const localX = screenPt.x - parentRect.left;
+        const localY = screenPt.y - parentRect.top;
+
+        // Place the pen so its nib tip sits directly on the stroke
+        pen.style.transform = `translate3d(${localX - penTipOffsetX}px, ${localY - penTipOffsetY}px, 0)`;
+      }
+
+      function animateLoop(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        let progress = elapsed / duration;
+
+        if (progress > 1) {
+          updatePenCoordinates(1);
+          if (statusLabel) statusLabel.textContent = 'Completed';
+
+          // Hold briefly, then replay
+          restartTimer = setTimeout(restartAnimation, 1800);
+          return;
+        }
+
+        // Smooth cubic ease-in-out progress
+        const easeProgress = progress < 0.5
+          ? 2 * progress * progress
+          : -1 + (4 - 2 * progress) * progress;
+
+        updatePenCoordinates(easeProgress);
+        animationFrameId = requestAnimationFrame(animateLoop);
+      }
+
+      function startAnimation() {
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+        if (restartTimer) clearTimeout(restartTimer);
+        startTime = null;
+        if (statusLabel) statusLabel.textContent = 'Active Tracing';
+        pen.style.opacity = '1';
+        animationFrameId = requestAnimationFrame(animateLoop);
+      }
+
+      function restartAnimation() {
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+        if (restartTimer) clearTimeout(restartTimer);
+        path.style.strokeDashoffset = `${pathLength}`;
+        startTime = null;
+        startAnimation();
+      }
+
+      // Replay button listener
+      replayBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        restartAnimation();
+      });
+
+      // Keep the pen aligned with the stroke when the window is resized
+      window.addEventListener('resize', () => {
+        const progress = 1 - (parseFloat(path.style.strokeDashoffset) / pathLength);
+        updatePenCoordinates(Math.max(0, Math.min(1, progress || 0)));
+      });
+
+      // Initiate on startup
+      startAnimation();
+    });
+  </script>
+<!-- END: AnimationControlScript -->
+</body>
+</html>
